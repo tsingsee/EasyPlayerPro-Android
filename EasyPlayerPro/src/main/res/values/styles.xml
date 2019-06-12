@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorTheme</item><!--Appbar背景色-->
+        <item name="colorPrimaryDark">@color/colorTheme</item><!--状态栏颜色-->
+        <item name="colorAccent">@color/colorTheme</item><!--控制各个控件被选中时的颜色-->
+        <item name="toolbarStyle">@style/toolbar</item>
+        <item name="android:windowBackground">@color/colorTheme</item>
+    </style>
+
+    <style name="toolbar" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <!--自定义seekbarstyle-->
+    <style name="CustomSeekbarStyle" >
+        <item name="android:maxHeight">4dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@color/colorAccent</item>
+        <item name="android:progressDrawable">@drawable/seekbar_progress_drawable</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:thumb">@drawable/new_thumb</item>
+    </style>
+
+</resources>

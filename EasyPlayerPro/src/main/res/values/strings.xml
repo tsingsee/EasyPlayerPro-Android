@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">EasyPlayer</string>
+    <string name="app_flavor">basic</string>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+
+    <!-- Example settings for Data & Sync -->
+
+    <!-- Example settings for Notifications -->
+
+    <string name="title_activity_splash">Splash</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!--<string name="key_udp_mode">USE_UDP_MODE</string>-->
+    <string name="description">desc</string>
+
+    <string name="about_info">EasyPlayerPro是由 TSINGSEE青犀开放平台 开发和维护的一款精炼、易用、高效、稳定的流媒体播放器，支持RTSP(RTP over TCP/UDP)、RTMP、HTTP、HLS、TCP、UDP等多种流媒体协议，支持各种各样编码格式的流媒体音视频直播流、点播流、文件播放！</string>
+</resources>
