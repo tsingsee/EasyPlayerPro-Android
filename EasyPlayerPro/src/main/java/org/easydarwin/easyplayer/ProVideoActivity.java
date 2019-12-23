@@ -28,6 +28,7 @@ import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewCompat;
@@ -159,6 +160,8 @@ public class ProVideoActivity extends AppCompatActivity {
                         mProgress.setVisibility(View.GONE);
                         mBinding.surfaceCover.setVisibility(View.GONE);
                         mBinding.playerContainer.setVisibility(View.GONE);
+                        mBinding.videoView.setVisibility(View.VISIBLE);
+                        mBinding.videoView2.setVisibility(View.VISIBLE);
 
                         // 快照
                         File file = FileUtil.getSnapshotFile(mVideoPath);
@@ -204,6 +207,8 @@ public class ProVideoActivity extends AppCompatActivity {
             @Override
             public boolean onError(IMediaPlayer iMediaPlayer, int i, int i1) {
                 Log.i(TAG, "播放错误");
+                mBinding.videoView.setVisibility(View.GONE);
+                mBinding.videoView2.setVisibility(View.GONE);
                 mProgress.setVisibility(View.GONE);
                 mBinding.playerContainer.setVisibility(View.VISIBLE);
 
@@ -223,6 +228,17 @@ public class ProVideoActivity extends AppCompatActivity {
             public void onCompletion(IMediaPlayer iMediaPlayer) {
                 Log.i(TAG, "播放完成");
                 mProgress.setVisibility(View.GONE);
+
+                if (mVideoPath.toLowerCase().startsWith("rtsp") ||
+                        mVideoPath.toLowerCase().startsWith("rtmp") ||
+                        mVideoPath.toLowerCase().startsWith("http")) {
+                    mVideoView.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            mVideoView.reStart();
+                        }
+                    }, 5000);
+                }
             }
         });
 
@@ -313,6 +329,20 @@ public class ProVideoActivity extends AppCompatActivity {
             mBinding.videoView2.start();
         }
     }
+
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//
+//        if (mVideoView != null) {
+//            mVideoView.postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//                    mVideoView.reStart();
+//                }
+//            }, 5000);
+//        }
+//    }
 
     @Override
     protected void onStop() {
