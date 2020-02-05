@@ -1033,8 +1033,11 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
                     ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "packet-buffering", 0);
                     ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "fflags","nobuffer");
 
-                    // framedrop 是在视频帧处理不过来的时候丢弃一些帧达到同步的效果
-                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "framedrop", 30);
+//                    // framedrop 是在视频帧处理不过来的时候丢弃一些帧达到同步的效果
+//                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "framedrop", 30);
+
+                    // 清空DNS,有時因爲在APP裏面要播放多種類型的視頻(如:MP4,直播,直播平臺保存的視頻,和其他http視頻), 有時會造成因爲DNS的問題而報10000問題的
+                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "dns_cache_clear", 1);
 
 //                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "iformat", "hls");
 //                    ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "flush_packets", 1);

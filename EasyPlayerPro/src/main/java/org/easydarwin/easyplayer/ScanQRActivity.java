@@ -39,6 +39,7 @@ public class ScanQRActivity extends AppCompatActivity {
                             if (text.toLowerCase().startsWith("rtsp://") ||
                                     text.toLowerCase().startsWith("rtmp://") ||
                                     text.toLowerCase().startsWith("http://") ||
+                                    text.toLowerCase().startsWith("https://") ||
                                     text.toLowerCase().startsWith("hls://")) {
                                 Intent intent = new Intent();
                                 intent.putExtra("text", text);

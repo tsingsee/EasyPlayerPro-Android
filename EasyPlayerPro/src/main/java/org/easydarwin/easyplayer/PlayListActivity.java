@@ -328,7 +328,8 @@ public class PlayListActivity extends AppCompatActivity implements View.OnClickL
                         }
 
                         if (url.toLowerCase().indexOf("rtsp://") != 0 && url.toLowerCase().indexOf("rtmp://") != 0 &&
-                            url.toLowerCase().indexOf("http://") != 0 && url.toLowerCase().indexOf("hls://") != 0) {
+                            url.toLowerCase().indexOf("http://") != 0 && url.toLowerCase().indexOf("https://") != 0 &&
+                                url.toLowerCase().indexOf("hls://") != 0) {
                             Toast.makeText(PlayListActivity.this,"不是合法的地址，请重新添加.",Toast.LENGTH_SHORT).show();
                             return;
                         }
