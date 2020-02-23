@@ -11,16 +11,13 @@ import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Base64;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
@@ -39,7 +36,6 @@ import org.easydarwin.easyplayer.databinding.VideoSourceItemBinding;
 import org.easydarwin.easyplayer.util.FileUtil;
 import org.easydarwin.easyplayer.util.SPUtil;
 import org.easydarwin.easyplayer.views.ProVideoView;
-import org.easydarwin.update.UpdateMgr;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -47,7 +43,6 @@ import java.util.List;
 import java.util.UUID;
 
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
-import static org.easydarwin.update.UpdateMgr.MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE;
 
 /**
  * 视频广场
@@ -66,8 +61,6 @@ public class PlayListActivity extends AppCompatActivity implements View.OnClickL
     private EditText edit;
 
     private Cursor mCursor;
-
-    private UpdateMgr update;
 
     private long mExitTime;//声明一个long类型变量：用于存放上一点击“返回键”的时刻
 
@@ -189,11 +182,6 @@ public class PlayListActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(new Intent(PlayListActivity.this, AboutActivity.class));
             }
         });
-
-        /* ==================== 版本更新 ==================== */
-        String url = "http://www.easydarwin.org/versions/easyplayer_pro/version.txt";;
-        update = new UpdateMgr(this);
-        update.checkUpdate(url);
     }
 
     @Override
@@ -205,12 +193,6 @@ public class PlayListActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE:
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    update.doDownload();
-                }
             case REQUEST_CAMERA_PERMISSION: {
                 if (grantResults.length > 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
                     toScanQRActivity();

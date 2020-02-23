@@ -80,7 +80,6 @@ repositories {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    implementation(name: 'update-release', ext: 'aar')
     implementation files('libs/gson-2.1.jar')
 
     implementation "com.android.support:appcompat-v7:${support_version}"
