@@ -8,8 +8,8 @@ android {
         applicationId "org.easydarwin.easyplayer"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 14200228
-        versionName "1.4.20.0228"
+        versionCode 14200308
+        versionName "1.4.20.0308"
 
         if (project.hasProperty('PLAYER_KEY')) {
             buildConfigField 'String', 'PLAYER_KEY', PLAYER_KEY

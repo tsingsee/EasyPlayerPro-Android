@@ -7,7 +7,7 @@ An elegant, simple, fast android RTSP/RTMP/HLS/HTTP Player.EasyPlayer support RT
 # 版本下载 #
 
 - EasyPlayerPro-Android
-https://fir.im/EasyPlayerPro
+[http://d.alphaqr.com/EasyPlayerPro](http://d.alphaqr.com/EasyPlayerPro)
 
 ![](http://www.easydarwin.org/github/EasyPlayerProAndroidDownload.png)
 
