@@ -17,7 +17,7 @@ An elegant, simple, fast android RTSP/RTMP/HLS/HTTP Player.EasyPlayer support RT
 
 ## 技术支持 ##
 
-- 邮件：[support@easydarwin.org](mailto:support@easydarwin.org) 
+- 邮件：[support@tsingsee.com](mailto:support@tsingsee.com) 
 
 - QQ交流群：<a href="http://jq.qq.com/?_wv=1027&k=2IDkJId" target="_blank" title="EasyPlayerPro">**544917793**</a>
 
@@ -28,4 +28,4 @@ An elegant, simple, fast android RTSP/RTMP/HLS/HTTP Player.EasyPlayer support RT
 
 TSINGSEE青犀开放平台：[http://open.tsingsee.com](http://open.tsingsee.com "TSINGSEE青犀开放平台")
 
-Copyright &copy; TSINGSEE.com 2012~2019
+Copyright &copy; TSINGSEE.com 2012~2020
