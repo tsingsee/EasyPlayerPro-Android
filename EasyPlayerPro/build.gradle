@@ -15,10 +15,7 @@ android {
             buildConfigField 'String', 'PLAYER_KEY', PLAYER_KEY
         } else {
             println("NO RTMPKEY FOUND")
-            /*
-            *本Key为3个月临时授权License，如需商业使用，请邮件至support@easydarwin.org了解此产品的授权信息。
-            */
-            buildConfigField 'String', 'PLAYER_KEY', "\"64686473647036526D343241654C56676E3071484A655A76636D63755A57467A65575268636E64706269356C59584E356347786865575679567778576F502B6C2F69426C59584E35\""
+            buildConfigField 'String', 'PLAYER_KEY', "\"EasyPlayer is free!\""
         }
 
         ndk {
