@@ -21,11 +21,9 @@ An elegant, simple, fast android RTSP/RTMP/HLS/HTTP Player.EasyPlayer support RT
 
 - QQ交流群：<a href="http://jq.qq.com/?_wv=1027&k=2IDkJId" target="_blank" title="EasyPlayerPro">**544917793**</a>
 
-> EasyPlayerPro是一款非常稳定的全协议/全功能/全平台播放器，各平台版本需要经过授权才能商业使用，商业授权方案可以通过以上渠道进行更深入的技术与合作咨询；
-
 
 ## 获取更多信息 ##
 
 TSINGSEE青犀开放平台：[http://open.tsingsee.com](http://open.tsingsee.com "TSINGSEE青犀开放平台")
 
-Copyright &copy; TSINGSEE.com 2012~2020
+Copyright &copy; TSINGSEE.com 2012~2021
